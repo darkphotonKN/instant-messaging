@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
+import { User } from 'src/user/entities/user.entity';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { ConfigService, ConfigModule } from '@nestjs/config';
         });
 
         return {
+          entities: [User],
           type: 'mysql',
           host,
           port,

@@ -18,7 +18,6 @@ export class SendbirdService {
     try {
       // const user = await this.sb.connect(userId);
       // The user is connected to Sendbird server.
-
       const sendbirdApiToken =
         this.configService.get<string>('SENDBIRD_API_TOKEN');
 
